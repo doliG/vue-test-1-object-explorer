@@ -13,14 +13,27 @@ export default {
   data () {
     return {
       obj: {
-        super: {
-          prop: {
-            nested: 'reall'
+        something: {
+          key1: {
+            nested: "really"
           },
-          other: 'hey'
+          other: "hey"
         },
-        stuff: 'yeah'
+        stuff: "yeah"
       }
+      // If the object changes, your code should work
+      // obj: {
+      //   somethingElse: {
+      //     key2: {
+      //       nested: {
+      //         more: "nesting"
+      //       }
+      //     },
+      //     hop: "hophop"
+      //   },
+      //   yipeee: "yeah"
+      // }
+
     }
   }
 }
