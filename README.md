@@ -4,7 +4,7 @@
 
 > Disclaimer: we don't use React internally, in favor of Vue.
   However, both being quite similar, we're confident that the mastering of one
-  leads to a quick the mastering of the other ;)
+  leads to a quick mastering of the other ;)
 
 ## Build Setup
 
@@ -29,8 +29,8 @@ Your aim is to create a very simple visualizer and editor for nested objects,
 like the one we put in the `obj` of the main instance.
 
 Your missions:
-1. Visualize the object clearly, like in the console or react-dev-tools
+1. Visualize the object clearly
 2. Allow edition of property values
-3. Allow edition of property names
+3. Allow edition of property keys
 
 Timing: 1h
