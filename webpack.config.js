@@ -27,7 +27,7 @@ module.exports = {
         }
       },
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         loader: 'babel-loader',
         exclude: /node_modules/
       },
@@ -44,7 +44,7 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js'
     },
-    extensions: ['*', '.js', '.vue', '.json']
+    extensions: ['*', '.js', '.jsx', '.vue', '.json']
   },
   devServer: {
     historyApiFallback: true,
