@@ -11,6 +11,20 @@ let obj = {
   stuff: 'yeah'
 }
 
+// let obj = {
+//   thisIsAnother: {
+//     objectWithNested: 'properties',
+//     other: 'hey'
+//   },
+//   stuff: {
+//     exceptThereIs: {
+//       moreNesting: {
+//         inThisSecondObject: 'Your code should work either way :)'
+//       }
+//     }
+//   }
+// }
+
 ReactDOM.render(
   <div id="app">
       <h1>Toucan Object explorer</h1>
