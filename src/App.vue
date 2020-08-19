@@ -83,24 +83,25 @@ export default {
     <h1>Toucan Object explorer</h1>
     <h2>Test by Guillaume Lodi</h2>
 
-    <ul>
-      <li
-        v-for="person in people"
-        @click="select(person)"
-        :key="person.id"
-        v-bind:class="{ active: selectedPersonInfo && person.id === selectedPersonInfo.personId }"
-      >{{ person.firstName }} {{ person.lastName }}</li>
-    </ul>
+    <div class="first-part">
+      <ul>
+        <li
+          v-for="person in people"
+          @click="select(person)"
+          :key="person.id"
+          v-bind:class="{ active: selectedPersonInfo && person.id === selectedPersonInfo.personId }"
+        >{{ person.firstName }} {{ person.lastName }}</li>
+      </ul>
 
-    <div v-if="selectedPersonInfo" class="info">
-      <p v-for="(value, prop) in selectedPersonInfo" :key="prop">
-        <b>{{ prop }}:</b>
-        {{ typeof value === 'object' ? '[+]' : value }}
-      </p>
+      <div v-if="selectedPersonInfo" class="info">
+        <p v-for="(value, prop) in selectedPersonInfo" :key="prop">
+          <b>{{ prop }}:</b>
+          {{ typeof value === 'object' ? '[+]' : value }}
+        </p>
+      </div>
     </div>
 
-    <!-- Uncomment to start the second part
-    <SecondPart />-->
+    <SecondPart />
   </div>
 </template>
 
@@ -109,7 +110,6 @@ export default {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }
@@ -119,14 +119,18 @@ h2 {
   font-weight: normal;
 }
 
-ul {
+.first-part {
+  text-align: center;
+}
+
+.first-part ul {
   list-style-type: none;
   padding: 0;
   display: flex;
   flex-direction: column;
 }
 
-li {
+.first-part li {
   margin: 0 10px;
   margin: 0.25rem auto;
   background: #efefef;
@@ -136,7 +140,7 @@ li {
   cursor: pointer;
 }
 
-li.active {
+.first-part li.active {
   outline: 2px dotted #3498db;
 }
 
