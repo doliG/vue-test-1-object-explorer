@@ -72,7 +72,11 @@ export default {
 <template>
   <div id="app">
     <h1>Toucan Object explorer</h1>
-    <h2>Test by Your name here</h2>
+    <h2>Test by Guillaume Lodi</h2>
+
+    <ul>
+      <li v-for="person in people" :key="person.id">{{ person.firstName }} {{ person.lastName }}</li>
+    </ul>
 
     <!-- Do the first part here -->
 
@@ -99,11 +103,17 @@ h1, h2 {
 ul {
   list-style-type: none;
   padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 li {
-  display: inline-block;
   margin: 0 10px;
+  margin: .25rem auto;
+  background: #efefef;
+  border-radius: 3px;
+  padding: 1rem;
+  min-width: 350px;
 }
 
 a {
