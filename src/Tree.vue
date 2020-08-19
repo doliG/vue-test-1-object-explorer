@@ -10,7 +10,7 @@ export default {
     <li v-for="(value, prop) in obj" :key="prop">
       <b>{{ prop }}:</b>
       <Tree v-if="typeof value === 'object'" :obj="value" />
-      <span v-else>{{ value }}</span>
+      <input v-else :value="value" />
     </li>
   </ul>
 </template>
